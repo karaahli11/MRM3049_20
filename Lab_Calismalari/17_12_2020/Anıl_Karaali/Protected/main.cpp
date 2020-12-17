@@ -9,9 +9,13 @@ public:
 
     void setMarka(string oMarka);
     string getMarka();
+
+    void setTekerlek(int oTeker);
+    int getTekerlek();
 protected:
     string Marka;
     string Model;
+    int Tekerlek;
 
 };
 void Otomobil::setMarka(string oMarka) {
@@ -27,6 +31,13 @@ void Otomobil::setModel(string oModel) {
 string Otomobil::getModel() {
     return Model;
 }
+
+void Otomobil::setTekerlek(int oTeker){
+    Tekerlek = oTeker;
+}
+int Otomobil::getTekerlek() {
+    return Tekerlek;
+}
 class Otobus :public Otomobil {
 public:
     Otobus() {
@@ -40,8 +51,10 @@ int main() {
     Otobus Van;
     Van.setMarka("Mercedes");
     Van.setModel("Vito");
+    Van.setTekerlek(6);
 
     cout << "Otobus adi :" << Van.getMarka()<< endl;
     cout << "Otobus adi :" << Van.getModel()<< endl;
+    cout << "Otobüs Tekerlek sayisi : " <<Van.getTekerlek();
     return 0;
 }
